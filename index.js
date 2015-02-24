@@ -9,7 +9,7 @@ var KindaDBCommon = KindaObject.extend('KindaDBCommon', function() {
   };
 
   this.getTable = function(name) {
-    var table = _.find(this.tables, { name: name });
+    var table = _.find(this.tables, 'name', name);
     if (!table) {
       table = this.Table.create(name, this.database);
       this.tables.push(table);
