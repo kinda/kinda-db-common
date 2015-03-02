@@ -8,6 +8,10 @@ var KindaDBCommon = KindaObject.extend('KindaDBCommon', function() {
     plugin.plug(this);
   };
 
+  this.getTables = function() {
+    return this.tables;
+  };
+
   this.getTable = function(name) {
     var table = _.find(this.tables, 'name', name);
     if (!table) {
